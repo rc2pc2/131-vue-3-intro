@@ -5,22 +5,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: '',
-            counter: 5,
-            imageUrl: '',
-            shoppingList: [
-            ],
+            nome: '',
+            cognome: '',
+            mostraNome: false,
+            userClasses: 'text-warning'
         }
     },
 
     methods:{
-        sayGoodmorning(){
-            console.log("Buongiorno!");
-        },
-        increaseCounter(){
-            this.sayGoodmorning();
-            this.counter++;
-            console.log(this.counter);
+        mostraBenvenuto(){
+            this.mostraNome = !this.mostraNome;
+            this.userClasses = "text-success";
         }
     }
 }).mount('#app');
